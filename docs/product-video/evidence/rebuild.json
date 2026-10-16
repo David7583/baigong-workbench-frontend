@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "command": "powershell -NoProfile -ExecutionPolicy Bypass -File rebuild.ps1",
+  "fresh_project_venv": true,
+  "first_sha256": "e89aa69a46be8800290be6cdd7c53850631f30b30d672bcbc4874b3ec87f8a97",
+  "second_sha256": "e89aa69a46be8800290be6cdd7c53850631f30b30d672bcbc4874b3ec87f8a97",
+  "bit_identical": true,
+  "pillow": "12.3.0",
+  "numpy": "2.4.6",
+  "python": "3.12.7"
+}

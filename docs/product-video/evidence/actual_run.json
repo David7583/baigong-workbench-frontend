@@ -1,0 +1,154 @@
+{
+  "id": "1e04484d-f349-4201-95a7-affdd2110fb8",
+  "workflow_id": "flow-1f0bf3fbad7e",
+  "workflow_version": 1,
+  "definition_hash": "24cfb3fe93a8690ca07af6d7ca6f026d5af42296ca4b2fa98311a313c0b4a262",
+  "approval_fingerprint": null,
+  "status": "completed",
+  "started_at": "2026-10-16T14:17:04.884Z",
+  "steps": [
+    {
+      "key": "node-a2f168464142",
+      "node": "node-a2f168464142",
+      "workflow_id": "flow-1f0bf3fbad7e",
+      "workflow_version": 1,
+      "name": "家庭资料 · 虚构样本",
+      "status": "completed",
+      "at": "2026-10-16T14:17:04.897Z",
+      "inputs": {},
+      "trace": "df09940786632c1aa697d9f1",
+      "outputs": {
+        "value": [
+          {
+            "year": 1988,
+            "event": "第一张全家福",
+            "source": "虚构相册条目 A"
+          },
+          {
+            "year": 2003,
+            "event": "搬入新家",
+            "source": "虚构家庭笔记 B"
+          },
+          {
+            "year": 2020,
+            "event": "三代人的团聚",
+            "source": "虚构纪念记录 C"
+          }
+        ]
+      },
+      "output_hash": "5b3ecb558fe3b1ef0b77e91f26aa6ddd1a33d8ed64550050f02dbf31fc0f98e9",
+      "finished_at": "2026-10-16T14:17:05.144Z"
+    },
+    {
+      "key": "node-5baf35b2a14d",
+      "node": "node-5baf35b2a14d",
+      "workflow_id": "flow-1f0bf3fbad7e",
+      "workflow_version": 1,
+      "name": "按年份筛选 · 1988",
+      "status": "completed",
+      "at": "2026-10-16T14:17:05.146Z",
+      "inputs": {
+        "value": [
+          {
+            "year": 1988,
+            "event": "第一张全家福",
+            "source": "虚构相册条目 A"
+          },
+          {
+            "year": 2003,
+            "event": "搬入新家",
+            "source": "虚构家庭笔记 B"
+          },
+          {
+            "year": 2020,
+            "event": "三代人的团聚",
+            "source": "虚构纪念记录 C"
+          }
+        ]
+      },
+      "trace": "799121ef186d22d286fcbd16",
+      "outputs": {
+        "value": {
+          "items": [
+            {
+              "year": 1988,
+              "event": "第一张全家福",
+              "source": "虚构相册条目 A"
+            }
+          ]
+        }
+      },
+      "output_hash": "c0d120119998cbdc25c289e46122079818e54ad33c19b756b86414e7399db616",
+      "finished_at": "2026-10-16T14:17:05.405Z"
+    },
+    {
+      "key": "node-45472b1a156a",
+      "node": "node-45472b1a156a",
+      "workflow_id": "flow-1f0bf3fbad7e",
+      "workflow_version": 1,
+      "name": "提取事件字段",
+      "status": "completed",
+      "at": "2026-10-16T14:17:05.407Z",
+      "inputs": {
+        "value": {
+          "items": [
+            {
+              "year": 1988,
+              "event": "第一张全家福",
+              "source": "虚构相册条目 A"
+            }
+          ]
+        }
+      },
+      "trace": "5523f03131586053710d2c7e",
+      "outputs": {
+        "value": "第一张全家福"
+      },
+      "output_hash": "580e40f26199d9d6fdf44052a689b926ff210233a0c0c83935631401b9b020bb",
+      "finished_at": "2026-10-16T14:17:05.667Z"
+    },
+    {
+      "key": "node-b322d96a8928",
+      "node": "node-b322d96a8928",
+      "workflow_id": "flow-1f0bf3fbad7e",
+      "workflow_version": 1,
+      "name": "生成时间线条目",
+      "status": "completed",
+      "at": "2026-10-16T14:17:05.670Z",
+      "inputs": {
+        "value": "第一张全家福"
+      },
+      "trace": "bab1cbba5f737199921565ea",
+      "outputs": {
+        "value": "1988 年｜第一张全家福\n资料来源：虚构家庭样本，仅演示数据处理。"
+      },
+      "output_hash": "0bf146db585099a0d3d007f16345fc4e87851b882be30428602895f0758fe42c",
+      "finished_at": "2026-10-16T14:17:05.904Z"
+    },
+    {
+      "key": "node-674c0a6fb27f",
+      "node": "node-674c0a6fb27f",
+      "workflow_id": "flow-1f0bf3fbad7e",
+      "workflow_version": 1,
+      "name": "保存任务结果",
+      "status": "completed",
+      "at": "2026-10-16T14:17:05.907Z",
+      "inputs": {
+        "value": "1988 年｜第一张全家福\n资料来源：虚构家庭样本，仅演示数据处理。"
+      },
+      "trace": "8d0b460f97f90049b07187cd",
+      "outputs": {
+        "value": "1988 年｜第一张全家福\n资料来源：虚构家庭样本，仅演示数据处理。"
+      },
+      "output_hash": "0bf146db585099a0d3d007f16345fc4e87851b882be30428602895f0758fe42c",
+      "finished_at": "2026-10-16T14:17:06.142Z"
+    }
+  ],
+  "cancel_requested": false,
+  "total_bytes": 562,
+  "current": "node-674c0a6fb27f",
+  "outputs": {
+    "node-674c0a6fb27f": "1988 年｜第一张全家福\n资料来源：虚构家庭样本，仅演示数据处理。"
+  },
+  "finished_at": "2026-10-16T14:17:06.144Z"
+}

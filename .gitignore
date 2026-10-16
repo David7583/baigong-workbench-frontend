@@ -16,3 +16,16 @@ logs/
 *.local.yml
 config/action/ai/api_keys_v0002.yml
 config/action/ai/ollama_config_v0001.yml
+
+# Product-video build environment and media are review assets, not source.
+.build/
+docs/product-video/assets/
+*.mp4
+*.webm
+*.mov
+*.wav
+*.mp3
+*.zip
+# Never commit credentials or signing material.
+*.pem
+*.key

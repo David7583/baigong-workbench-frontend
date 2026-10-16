@@ -8,7 +8,23 @@
     },
     {
       "path": ".gitignore",
-      "sha256": "4199d6ac2d9995a379c10b81123b24503becd0eaf17dcc125b0262cb2bc80313"
+      "sha256": "946eb7aa87f3d59cda6ad20e62f7d128378cc4f63d1e3566087b234f82c15eb6"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "ea6a63635b31135ea2f42df84afa35da8d19980fcdc8376d7c909642d9613d30"
+    },
+    {
+      "path": "README.en.md",
+      "sha256": "1156586d2576b0b4a87310a5d61dfd1082e92dbeae7a604ee27a49d5da649813"
+    },
+    {
+      "path": "README.md",
+      "sha256": "f0bf66a57d159e811b77ee69e1339aeccd559265d6734b160665e5f226926de2"
     },
     {
       "path": "chat/app_v0001.js",
@@ -199,6 +215,10 @@
       "sha256": "a7c07a329ae513962635339b2e3839dd340a87168fb2c92fdf34789637a0685f"
     },
     {
+      "path": "docs/RELEASE_VALIDATION.md",
+      "sha256": "65a2127fa546058cd51cc690516bbb9e24a77c1d4d5f3ad400b841995e404c3d"
+    },
+    {
       "path": "docs/images/01-empty-workbench.png",
       "sha256": "5c03bbeeb90f385cecec6a713090dc49425b2eea6eef01a25ee4f7a9cc3faa62"
     },
@@ -215,16 +235,88 @@
       "sha256": "94afc21f74f259dab7362bfea33399c5839ee98e010bb446aed727683ce76145"
     },
     {
-      "path": "docs/RELEASE_VALIDATION.md",
-      "sha256": "65a2127fa546058cd51cc690516bbb9e24a77c1d4d5f3ad400b841995e404c3d"
+      "path": "docs/product-video/ASSETS.md",
+      "sha256": "ad32dbb56b1f38d5c7876b2ef9d6b85527ca6ef9e743ec0ea6ea743c20eac836"
     },
     {
-      "path": "LICENSE",
-      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      "path": "docs/product-video/COLLABORATION_REVIEW.md",
+      "sha256": "1c575a975bd65cf853dffcee617fd8d7d33ae7ba68b208a3bdfa5f77aca682b2"
     },
     {
-      "path": "NOTICE",
-      "sha256": "ea6a63635b31135ea2f42df84afa35da8d19980fcdc8376d7c909642d9613d30"
+      "path": "docs/product-video/Local_AI_Workbench_zh.srt",
+      "sha256": "ec4cf7289ceb772afc8e844155d55dcae6e9cacfcfd0bd9ebba791415f953504"
+    },
+    {
+      "path": "docs/product-video/README.md",
+      "sha256": "1bc90c07cc80fb932483831f1965c2bb6d1280255657957e8d644142049582c2"
+    },
+    {
+      "path": "docs/product-video/assets_manifest.json",
+      "sha256": "cf9f1cdc2092324ba6382ccb87932c483a01f5a1d3f8ea99d31e630d1b1c4253"
+    },
+    {
+      "path": "docs/product-video/evidence/ACCEPTANCE.md",
+      "sha256": "65cc2ed7beb000888e4a81b3366a641994cd01dcb8d4a919d8366271f0dd57bf"
+    },
+    {
+      "path": "docs/product-video/evidence/actual_run.json",
+      "sha256": "5d43463bf2de769a5cb939aafed63ccd5108cc4202f462e4f839d21654b59451"
+    },
+    {
+      "path": "docs/product-video/evidence/audio_timing.json",
+      "sha256": "c9069a84e33728a4269cf370cee0a8571e87fee0bd41db647be6a92d21938c0c"
+    },
+    {
+      "path": "docs/product-video/evidence/capture.json",
+      "sha256": "41da84d6f48ffe9fa5c4b216ef70da21faba8aa6130a653dfedd169cbd5f71bb"
+    },
+    {
+      "path": "docs/product-video/evidence/contact_sheet.jpg",
+      "sha256": "b1686a5dfdb9bf748f517c4f80bd4c671b494412e987b4d6775cad96ad82a149"
+    },
+    {
+      "path": "docs/product-video/evidence/github_collaboration_before.json",
+      "sha256": "7062f63465d5b401a13612d75f5914dad615490a03494253a588e67d14628b79"
+    },
+    {
+      "path": "docs/product-video/evidence/privacy_review.json",
+      "sha256": "b30390264a3eadaa85537b2552ffad26733101ee12715fd42f8a7daa82e2fc9b"
+    },
+    {
+      "path": "docs/product-video/evidence/rebuild.json",
+      "sha256": "720ce65d8e73ee77a1ff3866b7f0ff4a257830fe0f92f6cd2abc852775a895ed"
+    },
+    {
+      "path": "docs/product-video/evidence/validation.json",
+      "sha256": "1905031055cdbc218c6a806820090989e2a25f54738ef403107f2f3fd032aa0b"
+    },
+    {
+      "path": "docs/product-video/poster.jpg",
+      "sha256": "06381d05bb91e9090312237c22bad5d20ee24977a8b2f36f411f903bba584f9d"
+    },
+    {
+      "path": "docs/product-video/rebuild.ps1",
+      "sha256": "7b8379fb80d67243e0bc0989d9913f29e7593cfdaf3c91a35aacf753a3779a9f"
+    },
+    {
+      "path": "docs/product-video/requirements.txt",
+      "sha256": "235011f39bec8ad340e6a79cfa081e64def17f966190dbd868a6fa1af0052216"
+    },
+    {
+      "path": "docs/product-video/source/capture.cjs",
+      "sha256": "ccdf04e5d3ac66a3747cdfd077c46e7de39c21b0d62de83041fc4fff54269cf6"
+    },
+    {
+      "path": "docs/product-video/source/narration.json",
+      "sha256": "9096af4c91d093b2a7f21e3266592e0c98be1facc64b7c50d237be0f44547ab7"
+    },
+    {
+      "path": "docs/product-video/source/render.py",
+      "sha256": "2d63a06b527830d6633ae42a25a34cad5056c804b2593360828389630054fec9"
+    },
+    {
+      "path": "docs/product-video/source/voice.py",
+      "sha256": "3f62308611cafc66bf8828e815c0d5602c066cd3f6429b678d839fa3517d30ea"
     },
     {
       "path": "package-lock.json",
@@ -233,14 +325,6 @@
     {
       "path": "package.json",
       "sha256": "1ccc84e3b5af6ce6fb9b2b6d6de2a4d351d9e4632cde3032a6facb1d94718a66"
-    },
-    {
-      "path": "README.en.md",
-      "sha256": "52b4bb327629f4a3cd9e5a772fd8f26ebd67db6f16aea715cd6ba9f2ade16305"
-    },
-    {
-      "path": "README.md",
-      "sha256": "4694a1b2765f6c5bcb000e6c8f5415789acbc5f8a909e6522e034c01cf36bef7"
     },
     {
       "path": "tests/release_contract_test_v0001.cjs",
@@ -687,6 +771,18 @@
       "sha256": "c7e98d530faafe5c5bd7a2d2b5556b97dab93ca518d8e0eafae0fce6ad81e2f7"
     },
     {
+      "path": "workspace/vendor/three/LICENSE",
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "workspace/vendor/three/NOTICE.md",
+      "sha256": "cfdad435e03cc62d89e798e0138e16b217b7f2113f565ad10a95b2b4492d805f"
+    },
+    {
+      "path": "workspace/vendor/three/OrbitControls.mjs",
+      "sha256": "03ff8a8f6ee82ec4af41a957303b5b2f68cf2f8a8c34d7b45c4f92ef24bad4cf"
+    },
+    {
       "path": "workspace/vendor/three/addons/environments/RoomEnvironment.mjs",
       "sha256": "4864655be12d7f39bc2e34c5affa279b2b2cddedbe34cdb90f9048e787101a07"
     },
@@ -723,12 +819,12 @@
       "sha256": "6e6a9f3d3b18eeea51c13fcc4fd88cc76f60a0a182eb004f8c565660fe0d31fc"
     },
     {
-      "path": "workspace/vendor/three/addons/postprocessing/ShaderPass.mjs",
-      "sha256": "3843648a5d9168420772e601eaeaf29018e34b5fd187158edfda8c05228dcc0a"
-    },
-    {
       "path": "workspace/vendor/three/addons/postprocessing/SSAOPass.mjs",
       "sha256": "e1d316e3ca1cc7c59cb46a51c38589c32b1ba5f960c11b6f55d3770233b65829"
+    },
+    {
+      "path": "workspace/vendor/three/addons/postprocessing/ShaderPass.mjs",
+      "sha256": "3843648a5d9168420772e601eaeaf29018e34b5fd187158edfda8c05228dcc0a"
     },
     {
       "path": "workspace/vendor/three/addons/shaders/CopyShader.mjs",
@@ -749,18 +845,6 @@
     {
       "path": "workspace/vendor/three/addons/utils/SkeletonUtils.mjs",
       "sha256": "b118dad1d17b2e8b86b254b6b147d0dd9d6af7349684e2269e0f6550248cbda4"
-    },
-    {
-      "path": "workspace/vendor/three/LICENSE",
-      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
-    },
-    {
-      "path": "workspace/vendor/three/NOTICE.md",
-      "sha256": "cfdad435e03cc62d89e798e0138e16b217b7f2113f565ad10a95b2b4492d805f"
-    },
-    {
-      "path": "workspace/vendor/three/OrbitControls.mjs",
-      "sha256": "03ff8a8f6ee82ec4af41a957303b5b2f68cf2f8a8c34d7b45c4f92ef24bad4cf"
     },
     {
       "path": "workspace/vendor/three/three.core.mjs",

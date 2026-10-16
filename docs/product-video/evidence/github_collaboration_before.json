@@ -1,0 +1,15 @@
+{
+  "full_name": "David7583/baigong-workbench-frontend",
+  "visibility": "public",
+  "has_issues": true,
+  "has_discussions": false,
+  "default_branch": "main",
+  "branch_protection": {
+    "http_status": 404
+  },
+  "rulesets": [],
+  "workflows": {
+    "total_count": 0,
+    "workflows": []
+  }
+}
