@@ -37,7 +37,7 @@ npm start
 
 You can explicitly select the backend Python interpreter with `WORKBENCH_PYTHON`. On Windows, background chat prefers `pythonw.exe` from the same environment and does not launch through PowerShell. Standard output and errors are saved in the backend launch logs.
 
-Electron may download its binary on first launch. If your network cannot reach GitHub Releases, configure your own proxy and run `npx install-electron --no`. Do not disable TLS verification. The release dependencies were installed with `npm ci`; desktop validation used an existing Electron 44.4.5 binary of the same version. A local download failure means that installation on a new computer has **not** been fully verified.
+Electron may download its binary on first launch. If your network cannot reach GitHub Releases, configure your own proxy and run `npx install-electron --no`. Do not disable TLS verification. The [2026-10-16 GitHub CI run](https://github.com/David7583/baigong-workbench-frontend/actions/runs/38921533744) completed `npm ci` and real Electron 44.4.5 chat startup on a fresh Windows runner. The earlier local binary-download limitation remains documented in the validation history; CI does not verify every computer or network environment.
 
 ## Your first chat
 
@@ -71,3 +71,9 @@ npm test
 ```
 
 See the [release validation notes](docs/RELEASE_VALIDATION.md) (in Chinese) for the validation record and limitations. This project uses Baigong's Apache-2.0 license. Third-party static assets retain their own licenses, and npm dependencies are not bundled with the source.
+
+## Release scope and community
+
+The current Windows source baseline has verified empty startup, chat UI, permission defaults, save/restart persistence and unload/reload. Workflow/adapter/resource interfaces exist, but external tools, online models, generalized AI workflow analysis, specialized plugins and other platforms need separate configuration and acceptance. The video distinguishes real execution from concept animation; it does not establish universal PDF/OCR/timeline support. No standalone installer build or automatic release pipeline is provided.
+
+Local storage does not mean all data stays on the computer: configured remote model/tool providers receive the requests authorized by the user. See [CONTRIBUTING](CONTRIBUTING.md), [SECURITY](SECURITY.md), [third-party inventory](THIRD_PARTY.md), [audit report](docs/REPOSITORY_AUDIT.md) and [Zenodo preparation](docs/ZENODO.md). Citation metadata is in CITATION.cff; no Workbench DOI has been claimed.

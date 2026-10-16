@@ -1,0 +1,136 @@
+[
+  {
+    "path": "OrbitControls.mjs",
+    "upstream": "package/examples/jsm/controls/OrbitControls.js",
+    "import_normalized_equal": true,
+    "sha256": "03ff8a8f6ee82ec4af41a957303b5b2f68cf2f8a8c34d7b45c4f92ef24bad4cf",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  },
+  {
+    "path": "three.core.mjs",
+    "upstream": "package/build/three.core.js",
+    "import_normalized_equal": true,
+    "sha256": "33970852dd2ffe6a7d27a0a499b2e07a9451850f29ac6c52053d0e59d1db6ee5",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  },
+  {
+    "path": "three.module.mjs",
+    "upstream": "package/build/three.module.js",
+    "import_normalized_equal": true,
+    "sha256": "5bcacc4884c4a53c9eefcd523348e3031f4c6a4f8d3295e62a7815e0db736b64",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  },
+  {
+    "path": "addons/environments/RoomEnvironment.mjs",
+    "upstream": "package/examples/jsm/environments/RoomEnvironment.js",
+    "import_normalized_equal": true,
+    "sha256": "4864655be12d7f39bc2e34c5affa279b2b2cddedbe34cdb90f9048e787101a07",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved",
+    "normalization_note": "Manually reviewed remaining doc-comment import extension; no behavior change."
+  },
+  {
+    "path": "addons/geometries/RoundedBoxGeometry.mjs",
+    "upstream": "package/examples/jsm/geometries/RoundedBoxGeometry.js",
+    "import_normalized_equal": true,
+    "sha256": "b26e749b00c61ba04bded6c83f3aee1826a8fad47608a6fdcb1c39fb8861bda0",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  },
+  {
+    "path": "addons/loaders/GLTFLoader.mjs",
+    "upstream": "package/examples/jsm/loaders/GLTFLoader.js",
+    "import_normalized_equal": true,
+    "sha256": "bf88518ad2dff924bf9c49716b9bf2bc2e92135409912fa7e3c042683b5eafb0",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  },
+  {
+    "path": "addons/math/SimplexNoise.mjs",
+    "upstream": "package/examples/jsm/math/SimplexNoise.js",
+    "import_normalized_equal": true,
+    "sha256": "b32247c437067ec526ee302a2f459657ad94191b3c7ca1835cc37180373d3b0a",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  },
+  {
+    "path": "addons/postprocessing/EffectComposer.mjs",
+    "upstream": "package/examples/jsm/postprocessing/EffectComposer.js",
+    "import_normalized_equal": true,
+    "sha256": "09f01bf6b0c630cb8169161e8d318931a025eeb3fd3248699f4d4c601ba17a2d",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  },
+  {
+    "path": "addons/postprocessing/MaskPass.mjs",
+    "upstream": "package/examples/jsm/postprocessing/MaskPass.js",
+    "import_normalized_equal": true,
+    "sha256": "2f6c9b8baf29fdd925308baee99ffef752b1a9de094c422c06790152c779ee8a",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  },
+  {
+    "path": "addons/postprocessing/OutputPass.mjs",
+    "upstream": "package/examples/jsm/postprocessing/OutputPass.js",
+    "import_normalized_equal": true,
+    "sha256": "4d3e455b7274765df4def25796f519791a9937278107d2d8e62971609f49374c",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  },
+  {
+    "path": "addons/postprocessing/Pass.mjs",
+    "upstream": "package/examples/jsm/postprocessing/Pass.js",
+    "import_normalized_equal": true,
+    "sha256": "5fc5f9200884f36e7bff37716f8d81faee449125734e0a81f502dbea3ce0091b",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  },
+  {
+    "path": "addons/postprocessing/RenderPass.mjs",
+    "upstream": "package/examples/jsm/postprocessing/RenderPass.js",
+    "import_normalized_equal": true,
+    "sha256": "6e6a9f3d3b18eeea51c13fcc4fd88cc76f60a0a182eb004f8c565660fe0d31fc",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  },
+  {
+    "path": "addons/postprocessing/ShaderPass.mjs",
+    "upstream": "package/examples/jsm/postprocessing/ShaderPass.js",
+    "import_normalized_equal": true,
+    "sha256": "3843648a5d9168420772e601eaeaf29018e34b5fd187158edfda8c05228dcc0a",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  },
+  {
+    "path": "addons/postprocessing/SSAOPass.mjs",
+    "upstream": "package/examples/jsm/postprocessing/SSAOPass.js",
+    "import_normalized_equal": true,
+    "sha256": "e1d316e3ca1cc7c59cb46a51c38589c32b1ba5f960c11b6f55d3770233b65829",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  },
+  {
+    "path": "addons/shaders/CopyShader.mjs",
+    "upstream": "package/examples/jsm/shaders/CopyShader.js",
+    "import_normalized_equal": true,
+    "sha256": "5d00bb24c7b40e40730d29f50ded81b7ffaf181f6be664cdb3b1cf58991e94ba",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  },
+  {
+    "path": "addons/shaders/OutputShader.mjs",
+    "upstream": "package/examples/jsm/shaders/OutputShader.js",
+    "import_normalized_equal": true,
+    "sha256": "70474eac4424ccfa913286405f184544a2408c5b6c7286b1856bd1c1f2209e4c",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  },
+  {
+    "path": "addons/shaders/SSAOShader.mjs",
+    "upstream": "package/examples/jsm/shaders/SSAOShader.js",
+    "import_normalized_equal": true,
+    "sha256": "70f2b608faad33dafa501337b17b547d283b4234d4e9a8f4ff7318308d12e4a1",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  },
+  {
+    "path": "addons/utils/BufferGeometryUtils.mjs",
+    "upstream": "package/examples/jsm/utils/BufferGeometryUtils.js",
+    "import_normalized_equal": true,
+    "sha256": "0428fd422f7427207a5213c84ee21fde911a56d2c6143de8fea7a35888f47e45",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  },
+  {
+    "path": "addons/utils/SkeletonUtils.mjs",
+    "upstream": "package/examples/jsm/utils/SkeletonUtils.js",
+    "import_normalized_equal": true,
+    "sha256": "b118dad1d17b2e8b86b254b6b147d0dd9d6af7349684e2269e0f6550248cbda4",
+    "review_result": "import paths/extensions and whitespace only; upstream attribution preserved"
+  }
+]

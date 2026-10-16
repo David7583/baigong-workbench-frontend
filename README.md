@@ -37,7 +37,7 @@ npm start
 
 `WORKBENCH_PYTHON` 可显式指定后端的 Python 解释器。后台聊天在 Windows 优先使用同环境的 `pythonw.exe`，不经 PowerShell 启动；标准输出与错误保存在后端启动日志中。
 
-Electron 的首次启动可能下载其二进制。如网络不允许访问 GitHub Releases，请配置你自己的代理后运行 `npx install-electron --no`。不要关闭 TLS 校验。本次依赖包通过 `npm ci` 安装；桌面验收使用已有的同版本 Electron 44.4.5 二进制，未把本机下载网络问题表述为新电脑安装已完全验证。
+Electron 的首次启动可能下载其二进制。如网络不允许访问 GitHub Releases，请配置你自己的代理后运行 `npx install-electron --no`。不要关闭 TLS 校验。2026-10-16 的 [GitHub CI](https://github.com/David7583/baigong-workbench-frontend/actions/runs/38921533744) 已在全新 Windows runner 上完成 `npm ci` 和真实 Electron 44.4.5 聊天启动。此前本机下载受限、复用已有二进制的记录保留在验收文档中；本次 CI 不代表所有电脑或网络环境均已验证。
 
 ## 首次聊天
 
@@ -71,3 +71,9 @@ npm test
 ```
 
 发布记录和限制见 [验收说明](docs/RELEASE_VALIDATION.md)。本项目沿用百工 Apache-2.0 许可；第三方静态资源保留自身许可证，npm 依赖不随源码捆绑。
+
+## 功能成熟度与协作
+
+当前 Windows 源码基线已验证空工作台启动、聊天界面、许可默认关闭、保存/重启持久化和卸载/重新加载。编排、适配器与资源管理已有接口；外部工具、在线模型、通用 AI 语义编排、专业插件和其他平台需分别配置与验收。视频中的真实执行与概念动画已区分，不能据此宣称通用 PDF/OCR/时间线流程均已实现。当前交付源码，没有独立安装包构建或自动正式发布流水线。
+
+本地存储不等于所有数据绝不外发：用户配置的远程模型/工具会接收获得授权的请求。参见[贡献指南](CONTRIBUTING.md)、[安全报告](SECURITY.md)、[第三方清单](THIRD_PARTY.md)、[仓库审计](docs/REPOSITORY_AUDIT.md)和 [Zenodo 准备](docs/ZENODO.md)。引用元数据见 CITATION.cff，尚未声明 Workbench DOI。

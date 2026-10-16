@@ -1,7 +1,9 @@
-# 本地 Three.js 展示依赖
+# Three.js 0.186.1
 
-上游：three 0.186.1，https://registry.npmjs.org/three/-/three-0.186.1.tgz ，https://github.com/mrdoob/three.js 。MIT 许可全文见本目录 LICENSE。
+Upstream: https://github.com/mrdoob/three.js ; package https://registry.npmjs.org/three/-/three-0.186.1.tgz . MIT license and copyright: see LICENSE.
 
-来源是本项目已准备的固定 npm 包，不重新下载。复制 build/three.module.js、build/three.core.js、examples/jsm/controls/OrbitControls.js；为适配既有静态服务只允许 .mjs 的规则，重命名为 .mjs，并将 three.core.js 的相对导入后缀改为 .mjs，将 OrbitControls 的 bare 'three' 导入改为 './three.module.mjs'。无其他实现修改。
+This distribution includes 19 .mjs files: three.core, three.module, OrbitControls and addons for environments, geometries, loaders, math, postprocessing, shaders and utilities. The complete upstream mapping and hashes are in ../../../../docs/audit/three-files.json (repository root: docs/audit/three-files.json).
 
-不使用 CDN、额外构建器、React 或 WebGPU。上游源哈希、发布完整性及副本哈希在本轮固定文件清单中保存。正式展示不依赖 development/staging 环境路径。编译后的第三方发布文件不是本项目业务脚本，不添加本项目脚本 Header。
+Modifications: .js filenames/import suffixes become .mjs; bare `three` imports use local static-service paths (`./three.module.mjs` or `/vendor/three.module.mjs`); one documentation import suffix and trailing blank lines follow the same adaptation. No component logic changes were found in comparison with the fixed upstream package. Original copyright/source comments are retained, including source references in RoomEnvironment, SimplexNoise and SSAOShader.
+
+No CDN is needed. These upstream files are third-party source and do not acquire the project's business-script header or Apache license.
