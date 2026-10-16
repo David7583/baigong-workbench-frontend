@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "model_calls": 0,
+  "family_data": "three fictional records created for this demo",
+  "personal_data_copied": false,
+  "git_media_files": 0,
+  "credential_pattern_hits": 0,
+  "gitignore_checked": [
+    "mp4",
+    "mp3",
+    "sqlite3",
+    ".env",
+    ".key"
+  ],
+  "source_file_count": 21,
+  "max_source_file_bytes": 347857,
+  "settings_changed": false,
+  "collaboration_recommendations": "COLLABORATION_REVIEW.md"
+}

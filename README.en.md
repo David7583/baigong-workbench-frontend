@@ -50,6 +50,8 @@ Other sections provide core management entry points and initially have no busine
 
 ## Screenshots
 
+See the [60-second product film project and validation record](docs/product-video/README.md) (in Chinese). It combines real UI footage, synthetic demo data, and clearly labeled concept scenes. The film and complete media package are delivered as review attachments linked from the associated Draft PR.
+
 These are actual screenshots from an isolated, empty environment. They contain no personal data, simulated sales results, or fabricated model responses.
 
 ![Empty workbench with only chat loaded](docs/images/01-empty-workbench.png)
