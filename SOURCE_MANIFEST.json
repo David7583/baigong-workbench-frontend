@@ -244,7 +244,7 @@
     },
     {
       "path": "docs/product-video/Local_AI_Workbench_zh.srt",
-      "sha256": "ec4cf7289ceb772afc8e844155d55dcae6e9cacfcfd0bd9ebba791415f953504"
+      "sha256": "40a7f39fb3f727ac551062ecd1c9469c25104340e0ae4a42f0103e1f125483e4"
     },
     {
       "path": "docs/product-video/README.md",
@@ -252,7 +252,7 @@
     },
     {
       "path": "docs/product-video/assets_manifest.json",
-      "sha256": "cf9f1cdc2092324ba6382ccb87932c483a01f5a1d3f8ea99d31e630d1b1c4253"
+      "sha256": "d12b6eae61a94ec1cb3f650224081d6f2a3e10c604e38545043df4374d507133"
     },
     {
       "path": "docs/product-video/evidence/ACCEPTANCE.md",
@@ -264,7 +264,7 @@
     },
     {
       "path": "docs/product-video/evidence/audio_timing.json",
-      "sha256": "c9069a84e33728a4269cf370cee0a8571e87fee0bd41db647be6a92d21938c0c"
+      "sha256": "d99a9ca219a050a000d3a9936af3c1e2d258878ca3d0d2f955e334bd8e1f70fb"
     },
     {
       "path": "docs/product-video/evidence/capture.json",
@@ -276,19 +276,19 @@
     },
     {
       "path": "docs/product-video/evidence/github_collaboration_before.json",
-      "sha256": "7062f63465d5b401a13612d75f5914dad615490a03494253a588e67d14628b79"
+      "sha256": "380da796d7771e6da9c32443e339c11bdfc8e447d44a7d29b937b2382b28a23d"
     },
     {
       "path": "docs/product-video/evidence/privacy_review.json",
-      "sha256": "b30390264a3eadaa85537b2552ffad26733101ee12715fd42f8a7daa82e2fc9b"
+      "sha256": "48b27b986881c4ad30356579a52d25509444ae17cb837aff21e57583d8e158f9"
     },
     {
       "path": "docs/product-video/evidence/rebuild.json",
-      "sha256": "720ce65d8e73ee77a1ff3866b7f0ff4a257830fe0f92f6cd2abc852775a895ed"
+      "sha256": "87fa3d1ef27667936a0f5585828094d0a693ba6580055b22b9538e682a3e43eb"
     },
     {
       "path": "docs/product-video/evidence/validation.json",
-      "sha256": "1905031055cdbc218c6a806820090989e2a25f54738ef403107f2f3fd032aa0b"
+      "sha256": "1a908a39fe1101f936ce59fc557441144878658c409cbb2b8f5f89ab64130ae0"
     },
     {
       "path": "docs/product-video/poster.jpg",
