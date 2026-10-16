@@ -37,7 +37,7 @@ npm start
 
 You can explicitly select the backend Python interpreter with `WORKBENCH_PYTHON`. On Windows, background chat prefers `pythonw.exe` from the same environment and does not launch through PowerShell. Standard output and errors are saved in the backend launch logs.
 
-Electron may download its binary on first launch. If your network cannot reach GitHub Releases, configure your own proxy and run `npx install-electron --no`. Do not disable TLS verification. The release dependencies were installed with `npm ci`; desktop validation used an existing Electron 44.4.5 binary of the same version. A local download failure means that installation on a new computer has **not** been fully verified.
+Electron may download its binary on first launch. If your network cannot reach GitHub Releases, configure your own proxy and run `npx install-electron --no`. Do not disable TLS verification. The [2026-10-16 GitHub CI run](https://github.com/David7583/baigong-workbench-frontend/actions/runs/38921533744) completed `npm ci` and real Electron 44.4.5 chat startup on a fresh Windows runner. The earlier local binary-download limitation remains documented in the validation history; CI does not verify every computer or network environment.
 
 ## Your first chat
 

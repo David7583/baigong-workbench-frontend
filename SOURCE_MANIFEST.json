@@ -48,11 +48,11 @@
     },
     {
       "path": "README.en.md",
-      "sha256": "d543f7560006f1cb3e66202d477d8e79c9ca5d78b6ae8988497a396684b480ae"
+      "sha256": "d23c3fa1f637453b3129b61fe3a097f87897e5c15fc7f5e4d6fe21f03f8c1c11"
     },
     {
       "path": "README.md",
-      "sha256": "f242e26e71619243201a2b4d3d94b80444a438f9447b5f422cf83be1144e2a2d"
+      "sha256": "2a67a7650e42fb4d8ed2dcdd723687457457439203522d0a0d0224f00456fc66"
     },
     {
       "path": "SECURITY.md",
@@ -252,11 +252,11 @@
     },
     {
       "path": "docs/RELEASE_VALIDATION.md",
-      "sha256": "65a2127fa546058cd51cc690516bbb9e24a77c1d4d5f3ad400b841995e404c3d"
+      "sha256": "8f994f6879d610808b34187fa6917a98e0035f6a69bcfe30034ff811185d3b22"
     },
     {
       "path": "docs/REPOSITORY_AUDIT.md",
-      "sha256": "c9587f4df560f0d160f26675657b43be361669a00a8af5c2d21fc56e5f441927"
+      "sha256": "53cf4fdb7a5503805c6fbcb93e6a4eb9029d0c1028b480ecc91b90cb91d3537a"
     },
     {
       "path": "docs/ZENODO.md",
@@ -284,7 +284,7 @@
     },
     {
       "path": "docs/audit/validation.json",
-      "sha256": "9608bc874f4bb9e1186817b4d188540f8bd868542b2a5bdadfdca76e8934593c"
+      "sha256": "0f2557625771291549792d5b0d06dc9bdb0360972a288ec75de9e24d4dd8c9cb"
     },
     {
       "path": "docs/images/01-empty-workbench.png",

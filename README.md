@@ -37,7 +37,7 @@ npm start
 
 `WORKBENCH_PYTHON` 可显式指定后端的 Python 解释器。后台聊天在 Windows 优先使用同环境的 `pythonw.exe`，不经 PowerShell 启动；标准输出与错误保存在后端启动日志中。
 
-Electron 的首次启动可能下载其二进制。如网络不允许访问 GitHub Releases，请配置你自己的代理后运行 `npx install-electron --no`。不要关闭 TLS 校验。本次依赖包通过 `npm ci` 安装；桌面验收使用已有的同版本 Electron 44.4.5 二进制，未把本机下载网络问题表述为新电脑安装已完全验证。
+Electron 的首次启动可能下载其二进制。如网络不允许访问 GitHub Releases，请配置你自己的代理后运行 `npx install-electron --no`。不要关闭 TLS 校验。2026-10-16 的 [GitHub CI](https://github.com/David7583/baigong-workbench-frontend/actions/runs/38921533744) 已在全新 Windows runner 上完成 `npm ci` 和真实 Electron 44.4.5 聊天启动。此前本机下载受限、复用已有二进制的记录保留在验收文档中；本次 CI 不代表所有电脑或网络环境均已验证。
 
 ## 首次聊天
 
