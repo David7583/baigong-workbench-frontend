@@ -2,3 +2,8 @@ Baigong (百工)
 Copyright 2026 Ruixin Yang
 
 Licensed under the Apache License, Version 2.0.
+
+This distribution includes adapted copies of Three.js 0.186.1.
+Copyright © 2010-2026 three.js authors.
+Three.js is licensed under the MIT License; its full license is retained in
+workspace/vendor/three/LICENSE. See that directory's NOTICE.md for modifications.

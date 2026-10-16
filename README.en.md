@@ -71,3 +71,9 @@ npm test
 ```
 
 See the [release validation notes](docs/RELEASE_VALIDATION.md) (in Chinese) for the validation record and limitations. This project uses Baigong's Apache-2.0 license. Third-party static assets retain their own licenses, and npm dependencies are not bundled with the source.
+
+## Release scope and community
+
+The current Windows source baseline has verified empty startup, chat UI, permission defaults, save/restart persistence and unload/reload. Workflow/adapter/resource interfaces exist, but external tools, online models, generalized AI workflow analysis, specialized plugins and other platforms need separate configuration and acceptance. The video distinguishes real execution from concept animation; it does not establish universal PDF/OCR/timeline support. No standalone installer build or automatic release pipeline is provided.
+
+Local storage does not mean all data stays on the computer: configured remote model/tool providers receive the requests authorized by the user. See [CONTRIBUTING](CONTRIBUTING.md), [SECURITY](SECURITY.md), [third-party inventory](THIRD_PARTY.md), [audit report](docs/REPOSITORY_AUDIT.md) and [Zenodo preparation](docs/ZENODO.md). Citation metadata is in CITATION.cff; no Workbench DOI has been claimed.
