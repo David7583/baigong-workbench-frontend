@@ -1,0 +1,43 @@
+/* Desktop presentation layered on the existing functional workspace. */
+#studio.desktop-workspace{font-family:"Segoe UI","Microsoft YaHei",sans-serif;grid-template-rows:0 30px 0 minmax(0,1fr) 4px var(--bottom,120px) 22px;grid-template-columns:var(--dock-left,220px) 4px minmax(0,1fr) 4px var(--dock-right,240px)}
+#studio.desktop-workspace.bottom-hidden{grid-template-rows:0 30px 0 minmax(0,1fr) 0 0 22px}
+#studio.desktop-workspace .titlebar,#studio.desktop-workspace .contextbar{display:none}
+#studio.desktop-workspace .menubar{grid-row:2;display:flex;align-items:stretch;overflow:visible;padding:0 6px;gap:0;background:var(--surface);border-bottom:1px solid var(--line);position:relative;z-index:110}
+.desktop-menu-root{padding:0 11px;font-size:12px;border-radius:0;white-space:nowrap;color:var(--ink)}
+.desktop-menu-root[aria-expanded=true],.desktop-menu-root:hover,.desktop-menu-root:focus-visible{background:var(--sage);color:white;outline:none}
+.desktop-menu-popup{position:fixed;z-index:1000;min-width:220px;max-width:min(390px,calc(100vw - 8px));max-height:calc(100vh - 8px);overflow:auto;padding:4px;border:1px solid var(--line);background:var(--surface);box-shadow:0 5px 15px #0003;border-radius:2px;font:12px "Segoe UI","Microsoft YaHei",sans-serif;color:var(--ink)}
+.desktop-menu-row{display:flex;width:100%;align-items:center;gap:8px;min-height:27px;padding:4px 7px;border:0;border-radius:1px;background:transparent;color:inherit;text-align:left;white-space:nowrap;font:inherit}
+.desktop-menu-row:hover:not(:disabled),.desktop-menu-row:focus:not(:disabled),.desktop-menu-row[aria-expanded=true]{background:var(--sage);color:white;outline:none}
+.desktop-menu-row:disabled{opacity:.46;cursor:default}.menu-row-icon{width:18px;text-align:center;flex:none}.menu-row-label{flex:1;overflow:hidden;text-overflow:ellipsis}.menu-row-key{opacity:.65;font-size:11px;margin-left:24px}.menu-row-arrow{width:10px;text-align:right}.desktop-menu-separator{height:1px;margin:4px 4px 4px 30px;background:var(--line)}
+#studio.desktop-workspace #studio-tabs{height:29px;background:var(--surface);font-size:12px}
+#studio.desktop-workspace .workspace-tab{font-size:12px;padding:0 10px;gap:10px;min-width:100px;max-width:230px;overflow:hidden;text-overflow:ellipsis}
+#studio.desktop-workspace .tab-plus{font-size:16px;padding:0 8px}
+#studio.desktop-workspace .catalog-view{padding:16px 20px;max-width:none;margin:0}
+#studio.desktop-workspace .catalog-title{font-size:20px;margin:6px 0 8px}
+#studio.desktop-workspace .catalog-banner{margin-bottom:16px}
+#studio.desktop-workspace .catalog-description{font-size:12px;line-height:1.55}
+#studio.desktop-workspace .category-stamp{display:none}
+#studio.desktop-workspace .resource-card{padding:12px;min-height:120px;border-radius:4px}
+#studio.desktop-workspace .card-add{min-height:120px}
+#studio.desktop-workspace #studio-library,#studio.desktop-workspace #studio-inspector{padding:0 9px;background:var(--surface)}
+#studio.desktop-workspace .panel-heading{height:30px;min-height:30px;font-size:12px;cursor:grab}
+#studio.desktop-workspace .library-label{margin:10px 0 6px}
+#studio.desktop-workspace .library-row{padding:7px 4px;gap:6px;font-size:12px;margin-bottom:1px}
+#studio.desktop-workspace .resource-icon{height:23px;width:23px;border-radius:3px}
+#studio.desktop-workspace .row-text small{font-size:10px;margin-top:2px}
+#studio.desktop-workspace .library-search input{padding:6px 0;font-size:12px}
+#studio.desktop-workspace .library-foot{display:none}
+#studio.desktop-workspace .embedded-bar{display:none}
+#studio.desktop-workspace .tool-frame{min-height:0}
+#studio.desktop-workspace .statusbar{font-size:11px;padding:0 8px;gap:14px}
+#studio.desktop-workspace .inspector-hero{margin:9px 0 12px}.desktop-workspace .inspector-hero .card-symbol{display:none}
+#studio.desktop-workspace .appearance{margin-top:0;padding:12px 0}
+.dock-collapse{margin-left:3px;min-width:24px;padding:2px 5px;font-size:15px}.dock-group-tabs{display:flex;border-bottom:1px solid var(--line);flex:none;min-height:27px;gap:2px}.dock-group-tabs button{font-size:12px;padding:5px 10px;border-radius:0}.dock-group-tabs [aria-selected=true]{box-shadow:inset 0 -2px var(--sage)}
+#studio.desktop-workspace[data-left-collapsed=true] #studio-library>*:not(.panel-heading),#studio.desktop-workspace[data-right-collapsed=true] #studio-inspector>*:not(.panel-heading){display:none}
+#studio.desktop-workspace[data-left-collapsed=true] #studio-library .panel-heading>*:not(.dock-collapse),#studio.desktop-workspace[data-right-collapsed=true] #studio-inspector .panel-heading>*:not(.dock-collapse){display:none}
+#studio.desktop-workspace[data-left-collapsed=true] #studio-library,#studio.desktop-workspace[data-right-collapsed=true] #studio-inspector{padding:0 3px}
+#studio.desktop-workspace[data-left-collapsed=true] .split-left,#studio.desktop-workspace[data-right-collapsed=true] .split-right{pointer-events:none}
+#studio.desktop-workspace[data-swapped=true] #studio-library{grid-column:5}
+#studio.desktop-workspace[data-swapped=true] #studio-inspector{grid-column:1}
+#studio.desktop-workspace.left-hidden.right-hidden{grid-template-columns:0 0 minmax(0,1fr) 0 0}
+@media(max-width:900px){#studio.desktop-workspace{grid-template-columns:min(var(--dock-left),180px) 3px minmax(100px,1fr) 3px min(var(--dock-right),190px)}#studio.desktop-workspace #studio-inspector{display:flex}#studio.desktop-workspace.right-hidden #studio-inspector{display:none}.desktop-menu-root{padding:0 6px;font-size:12px}}

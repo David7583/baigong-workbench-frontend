@@ -1,0 +1,47 @@
+/* 按可用窗口空间重排；不写入用户的面板尺寸或折叠偏好。 */
+#app{height:100dvh}
+header{height:auto;min-height:55px;flex-wrap:wrap;padding-block:8px}
+select:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+body[data-mode=user] #app{grid-template-rows:auto minmax(0,1fr) 28px}
+
+/* 窄窗口的技术面板转为纵向排列，工具栏仍可显式开关各面板。 */
+@media(max-width:1100px){
+ body[data-mode=developer] #app{grid-template-columns:minmax(0,1fr);grid-template-rows:max-content max-content minmax(300px,1fr) max-content max-content max-content 28px;overflow:auto}
+ body[data-mode=developer] header{grid-column:1;grid-row:1}
+ body[data-mode=developer] #toolbar{grid-column:1;grid-row:2;flex-wrap:wrap}
+ body[data-mode=developer] #main{grid-column:1;grid-row:3;min-height:260px}
+ body[data-mode=developer] .resizer{display:none}
+ body[data-mode=developer] #explorer{grid-column:1;grid-row:4;height:220px;border-top:1px solid var(--line)}
+ body[data-mode=developer] #inspector{grid-column:1;grid-row:5;height:240px;border-top:1px solid var(--line)}
+ body[data-mode=developer] #bottom{grid-column:1;grid-row:6;height:200px;border-top:1px solid var(--line)}
+ body[data-mode=developer] footer{grid-column:1;grid-row:7}
+ body[data-mode=developer] .left-hidden #explorer,
+ body[data-mode=developer] .right-hidden #inspector:not(.context-floating),
+ body[data-mode=developer] .bottom-hidden #bottom{display:none}
+ body[data-mode=developer] #app.right-hidden #inspector.context-floating{max-height:calc(100dvh - 160px);width:min(330px,85vw)}
+ #command{min-width:160px;flex:1}
+ .graph-tools{flex-wrap:wrap}
+ .graph-meta{margin-left:0;overflow-wrap:anywhere}
+ .bottom-tabs{flex-wrap:wrap}
+ .run-row,.event-row{flex-wrap:wrap;overflow-wrap:anywhere}
+}
+
+@media(max-width:600px){
+ header{padding:8px 12px;gap:8px}
+ header strong{font-size:12px}
+ header .version{display:none}
+ footer .footer-right{display:none}
+ footer{gap:8px;white-space:nowrap;overflow:hidden}
+ .user-wrap{padding:16px 16px 28px}
+ .user-heading h1{font-size:24px}
+ .user-wrap .section-heading{align-items:stretch;flex-direction:column}
+ #user-search{width:100%}
+ .reader-controls select{width:100%}
+ .user-wrap .user-welcome{padding:20px}
+ .user-welcome button{margin-bottom:8px}
+ .user-wrap .dialog-actions{flex-wrap:wrap}
+ #workspace{padding:16px}
+ .fact-grid{grid-template-columns:minmax(0,1fr)}
+ .record-map-controls input,.mount-form #db-path{min-width:0;width:100%}
+ .graph-search{min-width:0;max-width:100%}
+}

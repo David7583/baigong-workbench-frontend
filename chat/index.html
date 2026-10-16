@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Action Chat · 独立聊天</title>
+  <link rel="stylesheet" href="/styles.css?v=attachments-1">
+</head>
+<body>
+  <main class="shell">
+    <header class="app-header">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">A</span><div><h1>Action Chat</h1><span class="muted brand-caption">独立聊天 · 本地会话</span></div></div>
+      <div class="header-actions">
+        <div class="theme-switch" role="group" aria-label="界面主题">
+          <button id="darkTheme" class="theme-button" type="button" aria-pressed="true">黑色</button>
+          <button id="lightTheme" class="theme-button" type="button" aria-pressed="false">白色</button>
+        </div>
+        <button id="saveSession" class="secondary" type="button" data-service>保存</button>
+        <button id="exitService" class="secondary" type="button" data-service>保存并退出</button>
+      </div>
+    </header>
+    <div class="workspace">
+      <aside id="settingsPanel" class="sidebar" aria-label="聊天设置">
+        <div class="sidebar-heading"><h2>设置</h2><button id="collapseSettings" class="secondary compact" type="button" title="收起设置侧栏" aria-label="收起设置侧栏">‹</button><button id="newSession" type="button" class="secondary compact" data-service>＋ 新会话</button></div>
+        <section class="history-section" aria-label="历史会话">
+          <div class="history-heading"><h2>历史会话</h2><button id="refreshHistory" class="secondary compact" type="button" data-service>刷新列表</button></div>
+          <p id="historyStatus" class="hint" role="status">正在读取历史会话…</p>
+          <nav id="historyList" class="history-list" aria-label="选择历史会话"></nav>
+        </section>
+        <details class="control-card" open>
+          <summary>AI 权限 <span id="aiPermissionSummary">读取中</span></summary>
+          <div class="card-body">
+            <p id="aiPermissionStatus" class="hint" role="status">正在读取总控权限…</p>
+            <button id="toggleGlobalAI" type="button" role="switch" aria-checked="false" data-service>AI 总许可</button>
+            <p class="hint">影响本机所有接入 Action 总控的应用。关闭后拒绝新调用，已发送请求可能继续。</p>
+            <button id="toggleAppAI" type="button" role="switch" aria-checked="false" data-service>聊天应用许可</button>
+            <p class="hint">仅控制当前聊天应用。开启许可不调用模型，发送消息可能产生 API 费用。</p>
+            <button id="toggleAIRunning" type="button" class="secondary" data-service>启动 / 暂停聊天 AI</button>
+            <button id="refreshAIPermissions" type="button" class="secondary" data-service>刷新权限状态</button>
+          </div>
+        </details>
+        <details id="aiSettingsCard" class="control-card" open>
+          <summary>AI 接入与提示词 <span>模型 / Agent</span></summary>
+          <div class="card-body">
+            <label for="aiStage">设置环节</label>
+            <select id="aiStage" data-service><option value="answer">正式回答</option><option value="router">路由判断</option><option value="planner">检索查询策略</option></select>
+            <label for="aiKind">接入类型</label><select id="aiKind" data-service><option value="model">模型</option><option value="agent">Agent</option></select>
+            <label for="aiProvider">服务商 / 接入入口</label><select id="aiProvider" data-service></select>
+            <label for="aiModel">模型 / Agent</label><select id="aiModel" data-service></select>
+            <p id="aiConnectionHint" class="hint" role="status"></p>
+            <label for="aiPrompt">自定义提示词</label><textarea id="aiPrompt" rows="6" maxlength="8000" placeholder="留空使用默认提示词；可调整关注点、回答风格和查询偏好。" data-service></textarea>
+            <p class="hint">每个环节单独保存到当前会话。只读权限、来源证据与结构化输出要求仍由系统保障。</p>
+            <label for="aiTemperature">temperature</label><input id="aiTemperature" type="number" min="0" max="2" step="0.1" data-service>
+            <label for="aiBudget">模型输出额度</label><input id="aiBudget" type="number" min="128" max="8192" step="128" data-service>
+            <button id="saveAIStage" type="button" data-service>保存当前环节</button>
+            <button id="testAIStage" type="button" class="secondary" data-service>测试已保存接入（会调用 AI）</button>
+            <p id="aiTestResult" class="hint" role="status"></p>
+            <p id="aiEmbeddingHint" class="hint"></p>
+          </div>
+        </details>
+        <details class="control-card">
+          <summary>回答模型 <span>用于正式回复</span></summary>
+          <div class="card-body">
+            <label for="answerProvider">服务商</label><select id="answerProvider" data-service></select>
+            <label for="answerModel">模型</label><select id="answerModel" data-service></select>
+            <label for="answerTemperature">会话 temperature</label>
+            <input id="answerTemperature" type="number" min="0" max="2" step="0.1" value="0.2" aria-describedby="answerTemperatureHint" data-service>
+            <p id="answerTemperatureHint" class="hint"></p>
+            <button id="applyAnswer" type="button" data-service>应用回答模型</button>
+            <p class="hint">灰色选项表示未启用或不可用。修改配置后需重启服务。</p>
+          </div>
+        </details>
+        <details class="control-card">
+          <summary>路由判断 <span id="routerSummary">读取中</span></summary>
+          <div class="card-body">
+            <label for="routerMode">判断方式</label>
+            <select id="routerMode" data-service>
+              <option value="off">关闭 · 直接回答</option>
+              <option value="machine_only">本地规则 · 不额外调用模型</option>
+              <option value="hybrid">混合 · 规则优先</option>
+              <option value="ai_only">AI 判断 · 每轮调用模型</option>
+            </select>
+            <label for="routerProvider">路由服务商</label><select id="routerProvider" data-service></select>
+            <label for="routerModel">路由模型</label><select id="routerModel" data-service></select>
+            <label for="routerTemperature">路由 temperature</label>
+            <input id="routerTemperature" type="number" min="0" max="2" step="0.1" value="0" aria-describedby="routerTemperatureHint" data-service>
+            <p id="routerTemperatureHint" class="hint"></p>
+            <button id="applyRouter" type="button" data-service>应用路由设置</button>
+          </div>
+        </details>
+        <details class="control-card">
+          <summary>只读检索 <span id="retrievalSummary">关闭</span></summary>
+          <div class="card-body">
+            <label for="retrievalMode">检索方式</label>
+            <select id="retrievalMode" data-service>
+              <option value="off">关闭 · 仅聊天</option>
+              <option value="always">每轮检索</option>
+              <option value="router">由路由判断</option>
+            </select>
+            <p id="retrievalHint" class="hint">关闭时不会查询数据库。</p>
+            <fieldset id="retrievalOptions">
+              <legend>数据源与查询模式</legend>
+              <label for="queryMode">查询模式</label>
+              <select id="queryMode" data-service><option value="controlled">受控检索 · 固定模板</option><option value="strategy">AI 策略检索 · 生成受控查询</option></select>
+              <p id="retrievalAISelection" class="hint" role="status"></p>
+              <button id="configureRetrievalAI" type="button" class="secondary" data-service>设置检索模型 / Agent 与提示词</button>
+              <div id="sourceChoices"></div>
+              <label>每个数据源最多返回<input id="topK" type="number" min="1" max="100" value="10" data-service></label>
+              <p class="hint">固定模板使用输入全文匹配文字；可先输入关键词。数据库位置在部署配置中设置。</p>
+            </fieldset>
+            <button id="applyRetrieval" type="button" data-service>应用检索设置</button>
+            <button id="queryOnly" type="button" class="secondary" data-service>仅检索输入内容</button>
+            <button id="probeBackends" type="button" class="secondary" data-service>检查数据库可用性</button>
+          </div>
+        </details>
+        <details class="control-card diagnostics">
+          <summary>运行详情 <span>诊断信息</span></summary>
+          <pre id="statusBar">等待连接</pre>
+        </details>
+        <p class="sidebar-note">关闭标签页不会停服。结束使用时，请点右上角“保存并退出”。</p>
+      </aside>
+      <section class="chat-panel" aria-label="聊天">
+        <div class="chat-toolbar">
+          <button id="toggleSettings" class="secondary compact" type="button" aria-controls="settingsPanel" aria-expanded="true">设置</button>
+          <div class="conversation-info"><strong id="activeModel">正在连接…</strong><span id="sessionLabel" class="muted">读取会话状态</span></div>
+          <span id="connectionStatus" class="connection-status" role="status">连接中</span>
+        </div>
+        <div id="serviceBanner" class="service-banner" role="status" hidden></div>
+        <div id="historyToolbar" class="history-toolbar" hidden><button id="loadOlder" type="button" class="secondary compact" data-service hidden>加载更早消息</button><span id="historyPageStatus" class="hint"></span></div>
+        <div id="messages" class="messages" role="log" aria-label="聊天消息" aria-live="polite">
+          <div id="emptyState" class="empty-state"><span class="empty-symbol" aria-hidden="true">A</span><h2>从一个问题开始</h2><p id="emptyHint">在下方输入消息，左侧可随时切换模型。</p></div>
+        </div>
+        <form id="chatForm" class="composer">
+          <div id="attachmentList" class="attachment-list" aria-live="polite"></div><div class="attachment-toolbar"><button id="addAttachment" type="button" class="secondary compact" data-service>＋ 上传文件 / 图片</button><input id="attachmentInput" type="file" multiple hidden accept=".png,.jpg,.jpeg,.webp,.pdf,.txt,.md,.csv,.json,.log,.py,.js,.ts,.html,.css,.yml,.yaml,.xml,.sql"><span id="attachmentHint" class="hint">支持图片、PDF、文本文件；也可拖入或粘贴图片</span></div><label for="messageInput" class="sr-only">聊天消息</label>
+          <textarea id="messageInput" rows="3" placeholder="输入消息，或添加文件、粘贴图片…" data-service></textarea>
+          <div class="composer-footer"><span class="hint">Ctrl / ⌘ + Enter 发送 · Enter 换行</span><button id="sendMessage" type="submit" data-service>发送 ↑</button></div>
+        </form>
+        <div id="actionNotice" class="action-notice" role="status" aria-live="polite">正在连接本地服务…</div>
+      </section>
+    </div>
+  </main>
+  <dialog id="exitDialog" aria-labelledby="exitTitle">
+    <h2 id="exitTitle">保存并停止聊天服务？</h2>
+    <p>已发送的对话将导出保存，然后停止本机后台服务。其他聊天标签页也会断开。</p>
+    <p id="draftWarning" class="hint">输入框中未发送的内容不会保存。</p>
+    <div class="dialog-actions"><button id="cancelExit" class="secondary" type="button">返回聊天</button><button id="confirmExit" type="button">确认保存并退出</button></div>
+  </dialog>
+  <script src="/app_v0005.js?v=attachments-1" defer></script>
+</body>
+</html>

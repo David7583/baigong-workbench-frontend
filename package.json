@@ -1,0 +1,18 @@
+{
+  "name": "baigong-workbench-frontend",
+  "version": "0.7.0-chat.1",
+  "private": true,
+  "description": "Baigong Local AI Workbench desktop frontend",
+  "main": "desktop/workbench_desktop_v0019.cjs",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test tests/release_contract_test_v0001.cjs"
+  },
+  "devDependencies": {
+    "electron": "44.4.5",
+    "playwright": "1.63.0"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Local AI Workbench</title><link rel="stylesheet" href="/workspace/workbench_styles_v0001.css"><link rel="stylesheet" href="/workspace/workbench_theme_v0001.css"></head>
+<body data-theme="dark" data-mode="user">
+<link rel="stylesheet" href="/workspace/workbench_user_v0001.css">
+<link rel="stylesheet" href="/workspace/workbench_responsive_v0001.css">
+<div id="app">
+<header><span class="brand-mark">W</span><strong>Local AI Workbench</strong><span class="version">0.3 / ALPHA</span><input id="command" aria-label="搜索资源或命令" placeholder="搜索资源 · 输入 /home、/focus、/discover"><button id="connect">＋ 接入资源</button><button id="refresh">发现</button><button id="mode-switch">切换开发者模式</button></header>
+<section id="user-space"><p class="user-wrap">正在准备工作台…</p></section>
+<nav id="toolbar" aria-label="工作台工具"><button id="home">工作台</button><button id="business">业务仪表盘</button><button id="databases">数据库挂载</button><span class="toolbar-divider"></span><button data-toggle="left_collapsed">资源栏</button><button data-toggle="right_collapsed">检查器</button><button data-toggle="bottom_collapsed">运行面板</button><button data-toggle="focus_mode">专注 / 全画布</button><button id="reset-layout">重置布局</button><button id="theme">深浅主题</button><button id="motion">减少动态</button></nav>
+<aside id="explorer"><div class="panel-title">资源 / EXPLORER</div><select id="category" aria-label="资源分类"><option value="">全部类型</option></select><div id="resource-list"></div><div class="panel-title">兼容视图</div><div id="legacy-links"></div></aside>
+<div class="resizer left" data-resize="left" role="separator" aria-label="调整资源栏宽度" tabindex="0"></div>
+<main id="main"><div id="tabs" role="tablist"></div><section id="workspace"></section></main>
+<div class="resizer right" data-resize="right" role="separator" aria-label="调整检查器宽度" tabindex="0"></div>
+<aside id="inspector"><div class="panel-title">检查器 / INSPECTOR <button id="close-inspector" aria-label="关闭浮动检查器" hidden>×</button></div><div id="selection"><p class="muted">选择资源或数据对象，查看事实与来源。</p></div></aside>
+<div class="resizer bottom" data-resize="bottom" role="separator" aria-label="调整运行面板高度" tabindex="0"></div>
+<section id="bottom"><div class="bottom-tabs"><button data-panel="runs">运行</button><button data-panel="problems">问题</button><button data-panel="events">事件</button><button data-panel="output">输出</button><button data-panel="terminal">终端</button></div><div id="bottom-content"></div></section>
+<footer><span id="connection">后端连接中</span><span id="boot">加载快照</span><span id="selected-status">无选中资源</span><span class="footer-right">独立资源 · 真实状态 · 本地运行</span></footer>
+</div>
+<dialog id="manifest-dialog"><h2>连接独立资源</h2><p>导入资源声明。接入只登记和观察；执行操作仍需单独发起。</p><button id="pick-manifest">选择 Manifest 文件</button><textarea id="manifest-json" aria-label="Manifest JSON" rows="14" spellcheck="false"></textarea><p id="manifest-error" class="error"></p><div class="dialog-actions"><button id="close-manifest">取消</button><button id="submit-manifest" class="primary">连接资源</button></div></dialog>
+<dialog id="action-dialog"><h2 id="action-title">执行资源操作</h2><p>该操作将请求独立资源执行。AI 调用仍受所属端许可约束。</p><textarea id="action-input" aria-label="操作输入 JSON" rows="8">{}</textarea><p id="action-error" class="error"></p><div class="dialog-actions"><button id="action-cancel">取消</button><button id="action-submit" class="primary">确认执行</button></div></dialog>
+<div id="toast" role="status" hidden></div>
+<script type="module" src="/workspace/workbench_workspace_v0001.mjs"></script>
+</body></html>
